@@ -138,6 +138,25 @@
   </footer>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+      if (isLoggedIn) {
+        // El usuario ha iniciado sesión, mostrar contenido editable y opciones de agregar
+        document.getElementById('addContent').style.display = 'block';
+        document.getElementById('logout').style.display = 'block';
+      } else {
+        // El usuario no ha iniciado sesión, ocultar contenido editable y opciones de agregar
+        document.getElementById('addContent').style.display = 'none';
+        document.getElementById('logout').style.display = 'none';
+      }
+    });
+
+    function logout() {
+      // Limpiar la sesión y redirigir al usuario al formulario de inicio de sesión
+      sessionStorage.removeItem('isLoggedIn');
+      sessionStorage.removeItem('username');
+      window.location.href = 'login.html';
+    }
     // JavaScript para el funcionamiento del menú de navegación móvil
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
