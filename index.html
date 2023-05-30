@@ -5,144 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodie Crush</title>
   <style>
-    /* Estilos globales */
-
-    /* Estilos para dispositivos móviles */
-    @media (max-width: 768px) {
-      /* Ajustes de diseño para dispositivos móviles */
-    }
-
-    /* Estilos específicos para la página Foodie Crush */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
     }
 
     header {
       background-color: #f8f8f8;
-      padding: 20px;
+      padding: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    header img {
-      width: 150px;
-    }
-
     nav ul {
       list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      gap: 20px;
     }
 
-    nav a {
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
       text-decoration: none;
       color: #333;
-      font-weight: bold;
+      padding: 5px;
     }
 
     main {
       padding: 20px;
     }
 
-    section {
-      margin-bottom: 40px;
-    }
-
-    section h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    section img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
-
     footer {
       background-color: #f8f8f8;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
     }
+
+    /* Estilos para dispositivos móviles */
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
+      #addContent {
+        font-size: 14px;
+      }
+    }
+
   </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Foodie Crush Logo">
-    <nav>
-      <ul>
-        <li><a href="recetas.html">Recetas</a></li>
-        <li><a href="restaurantes.html">Restaurantes</a></li>
-        <li><a href="tendencias.html">Tendencias</a></li>
-        <li><a href="salud-nutricion.html">Salud y Nutrición</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <div id="addContent" style="display: none;">
-      <!-- Aquí se muestra el contenido editable y opciones para agregar contenido -->
-    </div>
-
-    <button id="logout" style="display: none;" onclick="logout()">Cerrar sesión</button>
-    
-    <section id="banner">
-      <img src="banner.jpg" alt="Banner de Foodie Crush">
-    </section>
-
-    <section id="destacados">
-      <h2>Artículos Populares</h2>
-      <!-- Muestra los artículos populares con imágenes y títulos -->
-    </section>
-
-    <section id="categorias">
-      <h2>Categorías de Noticias</h2>
-      <ul>
-        <li>
-          <a href="#">Recetas</a>
-          <img src="categoria_recetas.jpg" alt="Imagen de recetas">
-        </li>
-        <li>
-          <a href="#">Restaurantes</a>
-          <img src="categoria_restaurantes.jpg" alt="Imagen de restaurantes">
-        </li>
-        <!-- Agrega más categorías de noticias con imágenes y enlaces -->
-      </ul>
-    </section>
-
-    <section id="articulos">
-      <h2>Últimos Artículos</h2>
-      <!-- Muestra los últimos artículos con imágenes y títulos -->
-    </section>
-
-    <section id="recetas">
-      <h2>Recetas Destacadas</h2>
-      <!-- Muestra las recetas destacadas con imágenes y títulos -->
-    </section>
-
-    <section id="comunicadores">
-      <h2>Comunicadores Sociales Destacados</h2>
-      <!-- Muestra los perfiles de comunicadores sociales con imágenes, nombres y enlaces -->
-    </section>
-
-    <section id="anunciantes">
-      <h2>Anunciantes Destacados</h2>
-      <!-- Muestra los anunciantes y sus productos/servicios relacionados con comida -->
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <!-- Agrega un formulario de contacto para que los lectores puedan enviar consultas -->
-    </section>
-  </main>
-
-  <footer>
-    <!-- Pie de página -->
-  </footer>
-
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       var isLoggedIn = sessionStorage.getItem('isLoggedIn');
@@ -163,13 +84,58 @@
       sessionStorage.removeItem('username');
       window.location.href = 'login.html';
     }
-    // JavaScript para el funcionamiento del menú de navegación móvil
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('show');
-    });
   </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="recetas.html">Recetas</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+        <li><a href="tendencias.html">Tendencias</a></li>
+        <li><a href="salud-nutricion.html">Salud y Nutrición</a></li>
+      </ul>
+    </nav>
+    <a href="index.html">Foodie Crush</a>
+    <a href="login.html">Iniciar sesión</a>
+    <a href="register.html">Registrarse</a>
+  </header>
+
+  <main>
+  <section id="recetas">
+    <h2>Recetas</h2>
+    <p>Aquí puedes encontrar deliciosas recetas para disfrutar en casa.</p>
+    <!-- Agrega aquí el contenido relacionado con las recetas -->
+  </section>
+
+  <section id="restaurantes">
+    <h2>Restaurantes</h2>
+    <p>Descubre los mejores restaurantes de la ciudad y sus especialidades.</p>
+    <!-- Agrega aquí el contenido relacionado con los restaurantes -->
+  </section>
+
+  <section id="tendencias">
+    <h2>Tendencias</h2>
+    <p>Explora las últimas tendencias en gastronomía y cocina.</p>
+    <!-- Agrega aquí el contenido relacionado con las tendencias -->
+  </section>
+
+  <section id="salud-nutricion">
+    <h2>Salud y Nutrición</h2>
+    <p>Consejos y artículos para mantener una alimentación saludable.</p>
+    <!-- Agrega aquí el contenido relacionado con la salud y nutrición -->
+  </section>
+
+    <div id="addContent" style="display: none;">
+      <!-- Aquí se muestra el contenido editable y opciones para agregar contenido -->
+    </div>
+
+    <button id="logout" style="display: none;" onclick="logout()">Cerrar sesión</button>
+  </main>
+
+  <footer>
+    <!-- Contenido del pie de página... -->
+  </footer>
 </body>
 </html>
