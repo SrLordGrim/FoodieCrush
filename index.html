@@ -66,31 +66,16 @@
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var isLoggedIn = sessionStorage.getItem('isLoggedIn');
-      if (isLoggedIn) {
-        // El usuario ha iniciado sesión, mostrar contenido editable y opciones de agregar
         document.getElementById('addContent').style.display = 'block';
         document.getElementById('logout').style.display = 'block';
-      } else {
-        // El usuario no ha iniciado sesión, ocultar contenido editable y opciones de agregar
-        document.getElementById('addContent').style.display = 'none';
-        document.getElementById('logout').style.display = 'none';
-      }
+      } 
     });
-
-    function logout() {
-      // Limpiar la sesión y redirigir al usuario al formulario de inicio de sesión
-      sessionStorage.removeItem('isLoggedIn');
-      sessionStorage.removeItem('username');
-      window.location.href = 'login.html';
-    }
   </script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Inicio</a></li>
         <li><a href="recetas.html">Recetas</a></li>
         <li><a href="restaurantes.html">Restaurantes</a></li>
         <li><a href="tendencias.html">Tendencias</a></li>
@@ -100,7 +85,43 @@
     <a href="index.html">Foodie Crush</a>
     <a href="login.html">Iniciar sesión</a>
     <a href="register.html">Registrarse</a>
-  </header>
+  </header>  <main>
+  <section id="recetas">
+    <h2>Recetas</h2>
+    <p>Aquí puedes encontrar deliciosas recetas para disfrutar en casa.</p>
+    <!-- Agrega aquí el contenido relacionado con las recetas -->
+  </section>
+
+  <section id="restaurantes">
+    <h2>Restaurantes</h2>
+    <p>Descubre los mejores restaurantes de la ciudad y sus especialidades.</p>
+    <!-- Agrega aquí el contenido relacionado con los restaurantes -->
+  </section>
+
+  <section id="tendencias">
+    <h2>Tendencias</h2>
+    <p>Explora las últimas tendencias en gastronomía y cocina.</p>
+    <!-- Agrega aquí el contenido relacionado con las tendencias -->
+  </section>
+
+  <section id="salud-nutricion">
+    <h2>Salud y Nutrición</h2>
+    <p>Consejos y artículos para mantener una alimentación saludable.</p>
+    <!-- Agrega aquí el contenido relacionado con la salud y nutrición -->
+  </section>
+
+    <div id="addContent" style="display: none;">
+      <!-- Aquí se muestra el contenido editable y opciones para agregar contenido -->
+    </div>
+
+    <button id="logout" style="display: none;" onclick="logout()">Cerrar sesión</button>
+  </main>
+
+  <footer>
+    <!-- Contenido del pie de página... -->
+  </footer>
+</body>
+</html>
 
   <main>
   <section id="recetas">
