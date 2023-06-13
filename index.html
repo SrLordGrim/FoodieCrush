@@ -8,13 +8,23 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Menú</a></li>
-        <li><a href="#">Reservas</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Tu Página de Comida</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#recetas">Recetas</a></li>
+          <li><a href="#restaurantes">Restaurantes</a></li>
+          <li><a href="#tendencias">Tendencias</a></li>
+          <li><a href="#entrevistas">Entrevistas</a></li>
+          <li class="search">
+            <input type="text" placeholder="Buscar">
+            <button type="submit">&#128269;</button>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -54,6 +64,7 @@
   <footer>
     <p>&copy; 2023 Tu Página de Comida. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
