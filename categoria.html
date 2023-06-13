@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Página de Comida - Categoría</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Tu Página de Comida</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+          <li><a href="#noticias">Noticias</a></li>
+          <li><a href="#recetas">Recetas</a></li>
+          <li><a href="#restaurantes">Restaurantes</a></li>
+          <li><a href="#tendencias">Tendencias</a></li>
+          <li><a href="#entrevistas">Entrevistas</a></li>
+          <li class="search">
+            <input type="text" placeholder="Buscar">
+            <button type="submit">&#128269;</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="category-news">
+      <h2>Noticias de la categoría: <span id="categoria"></span></h2>
+      <div class="news-card">
+        <h3>Noticia 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Leer más</a>
+      </div>
+      <div class="news-card">
+        <h3>Noticia 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Leer más</a>
+      </div>
+      <div class="news-card">
+        <h3>Noticia 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <a href="#">Leer más</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Tu Página de Comida. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Obtener el valor de la categoría desde la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoria = urlParams.get('categoria');
+    
+    // Mostrar el nombre de la categoría en la página
+    document.getElementById('categoria').textContent = categoria;
+  </script>
+</body>
+</html>
