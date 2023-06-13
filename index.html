@@ -2,132 +2,43 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tu Página de Comida</title>
+  <title>Foodie Crush</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">Tu Página de Comida</a>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <ul class="menu">
-          <li><a href="#noticias">Noticias</a></li>
-          <li><a href="#recetas">Recetas</a></li>
-          <li><a href="#restaurantes">Restaurantes</a></li>
-          <li><a href="#tendencias">Tendencias</a></li>
-          <li><a href="#entrevistas">Entrevistas</a></li>
-          <li class="search">
-            <input type="text" placeholder="Buscar">
-            <button type="submit">&#128269;</button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <h1>Bienvenido a Tu Página de Comida</h1>
-      <p>Descubre sabores exquisitos en nuestro restaurante.</p>
-      <a href="#" class="btn">Reserva ahora</a>
-    </section>
-
-    <section class="categories">
-      <h2>Categorías</h2>
-      <ul>
-        <li><a href="categoria.html?categoria=internacional">Cocina Internacional</a></li>
-        <li><a href="categoria.html?categoria=consejos">Consejos y Trucos</a></li>
-        <li><a href="categoria.html?categoria=eventos">Eventos Gastronómicos</a></li>
+  <nav class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html">Foodie Crush</a>
+      <ul class="nav-links">
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="recetas.html">Recetas</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+        <li><a href="tendencias.html">Tendencias</a></li>
+        <li><a href="entrevistas.html">Entrevistas</a></li>
       </ul>
-    </section>
+      <form class="search-form" action="#" method="get">
+        <input type="text" name="search" placeholder="Buscar..." required>
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
 
-    <section class="featured-news">
-      <h2>Noticias Destacadas</h2>
-      <div class="news-card">
-        <h3>Noticia 1</h3>
-        <img src="article1.jpg" alt="Imagen de la noticia 1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#">Leer más</a>
-        <div class="comments-section">
-          <h4>Comentarios</h4>
-          <div class="comment">
-            <p>Usuario1: Excelente artículo, me encantó!</p>
-          </div>
-          <div class="comment">
-            <p>Usuario2: Muy útil la información, gracias por compartir.</p>
-          </div>
-          <!-- Agrega aquí el formulario para añadir nuevos comentarios -->
-        </div>
-      </div>
-      <div class="news-card">
-        <h3>Noticia 2</h3>
-        <img src="article2.jpg" alt="Imagen de la noticia 2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#">Leer más</a>
-        <div class="comments-section">
-          <h4>Comentarios</h4>
-          <div class="comment">
-            <p>Usuario3: Excelente artículo, muy interesante.</p>
-          </div>
-          <div class="comment">
-            <p>Usuario4: ¡Me encantó la receta! La probaré pronto.</p>
-          </div>
-          <!-- Agrega aquí el formulario para añadir nuevos comentarios -->
-        </div>
-      </div>
-      <div class="news-card">
-        <h3>Noticia 3</h3>
-        <img src="article3.jpg" alt="Imagen de la noticia 3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#">Leer más</a>
-        <div class="comments-section">
-          <h4>Comentarios</h4>
-          <div class="comment">
-            <p>Usuario5: Gracias por la información, muy útil.</p>
-          </div>
-          <!-- Agrega aquí el formulario para añadir nuevos comentarios -->
-        </div>
-      </div>
-    </section>
-  </main>
+  <div class="container">
+    <h1>Bienvenido a Foodie Crush</h1>
+    <p>Descubre el apasionante mundo de la gastronomía y encuentra inspiración para tus próximas aventuras culinarias.</p>
+  </div>
 
-  <aside class="advertisements">
-    <div class="ad-banner">
-      <img src="ad1.jpg" alt="Anuncio 1">
-    </div>
-    <div class="ad-square">
-      <img src="ad2.jpg" alt="Anuncio 2">
-    </div>
-    <div class="ad-banner">
-      <img src="ad3.jpg" alt="Anuncio 3">
-    </div>
-  </aside>
+  <!-- Resto del contenido de la página -->
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-column">
-        <h3>Boletín de Noticias</h3>
-        <p>Suscríbete a nuestro boletín de noticias para recibir actualizaciones por correo electrónico.</p>
-        <form class="newsletter-form" action="#" method="post">
-          <input type="email" name="email" placeholder="Tu correo electrónico" required>
-          <button type="submit">Suscribirse</button>
-        </form>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/foodiecrush">Instagram</a>
+        <a href="https://www.facebook.com/foodiecrush">Facebook</a>
+        <a href="https://www.youtube.com/foodiecrush">YouTube</a>
       </div>
-      <div class="footer-column">
-        <h3>Síguenos en redes sociales</h3>
-        <div class="social-media-icons">
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="instagram-icon.png" alt="Instagram"></a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="#" target="_blank" rel="noopener noreferrer"><img src="youtube-icon.png" alt="YouTube"></a>
-        </div>
-      </div>
+      <p>© 2023 Foodie Crush. Todos los derechos reservados.</p>
     </div>
-    <p>&copy; 2023 Tu Página de Comida. Todos los derechos reservados.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
