@@ -1,189 +1,74 @@
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Estilos del encabezado */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Estilos de la barra de navegación */
+/* Estilos para la barra de navegación */
 .navbar {
   background-color: #333;
   color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
+  padding: 10px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .logo {
   color: #fff;
   font-size: 24px;
-  font-weight: bold;
   text-decoration: none;
 }
 
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.menu {
-  list-style-type: none;
+.nav-links {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  padding: 0;
   display: flex;
-  align-items: center;
 }
 
-.menu li {
-  margin-left: 20px;
+.nav-links li {
+  margin-right: 10px;
 }
 
-.menu li:first-child {
-  margin-left: 0;
-}
-
-.menu a {
+.nav-links a {
   color: #fff;
   text-decoration: none;
 }
 
-.search {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.search input[type="text"] {
-  border: none;
+.search-form input {
   padding: 5px;
 }
 
-.search button {
-  background-color: transparent;
+.search-form button {
+  padding: 5px 10px;
+  background-color: #555;
   color: #fff;
   border: none;
-  padding: 5px;
-  cursor: pointer;
 }
 
-/* Estilos de la sección de héroe */
-.hero {
-  background-image: url('hero-background.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 36px;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-/* Estilos de la sección de categorías */
-.categories {
-  background-color: #f2f2f2;
-  padding: 50px;
-}
-
-.categories h2 {
-  font-size: 24px;
-}
-
-.categories ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.categories li {
+/* Estilos para el contenido principal */
+h1 {
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
-/* Estilos de la sección de noticias destacadas */
-.featured-news {
-  padding: 50px;
-}
-
-.featured-news h2 {
-  font-size: 24px;
-}
-
-.news-card {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.news-card h3 {
+p {
   font-size: 18px;
+  line-height: 1.5;
 }
 
-.news-card p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.news-card a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Estilos de la sección de noticias por categoría */
-.category-news {
-  padding: 50px;
-}
-
-.category-news h2 {
-  font-size: 24px;
-}
-
-/* Estilos del pie de página */
-footer {
+/* Estilos para el footer */
+.footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:not(:last-child) {
+  margin-right: 10px;
+}
+
