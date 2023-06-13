@@ -122,56 +122,62 @@ nav ul li a {
   font-size: 18px;
 }
 
-/* Estilos de la sección de sobre nosotros */
-.about {
+/* Estilos de la sección de categorías */
+.categories {
   background-color: #f2f2f2;
   padding: 50px;
 }
 
-.about h2 {
+.categories h2 {
   font-size: 24px;
 }
 
-/* Estilos de la sección de menú */
-.menu {
-  padding: 50px;
-}
-
-.menu h2 {
-  font-size: 24px;
-}
-
-.menu ul {
+.categories ul {
   list-style-type: none;
   padding: 0;
 }
 
-.menu li {
+.categories li {
   margin-bottom: 10px;
 }
 
-/* Estilos de la sección de contacto */
-.contact {
-  background-color: #f2f2f2;
+/* Estilos de la sección de noticias destacadas */
+.featured-news {
   padding: 50px;
 }
 
-.contact h2 {
+.featured-news h2 {
   font-size: 24px;
 }
 
-.contact form input,
-.contact form textarea {
-  width: 100%;
+.news-card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.news-card h3 {
+  font-size: 18px;
+}
+
+.news-card p {
+  font-size: 14px;
   margin-bottom: 10px;
 }
 
-.contact form input[type="submit"] {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
+.news-card a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos de la sección de noticias por categoría */
+.category-news {
+  padding: 50px;
+}
+
+.category-news h2 {
+  font-size: 24px;
 }
 
 /* Estilos del pie de página */
@@ -180,30 +186,4 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-/* Estilos para pantallas móviles */
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-toggle:checked ~ .menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
-  }
-
-  .menu-toggle:checked ~ .menu li {
-    margin: 10px 0;
-  }
 }
