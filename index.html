@@ -1,162 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foodie Crush</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #f8f8f8;
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin-right: 10px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    footer {
-      background-color: #f8f8f8;
-      padding: 10px;
-      text-align: center;
-    }
-
-    /* Estilos para dispositivos móviles */
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
-
-      nav ul li {
-        margin-right: 0;
-        margin-bottom: 5px;
-      }
-
-      #addContent {
-        font-size: 14px;
-      }
-    }
-
-  </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('addContent').style.display = 'block';
-        document.getElementById('logout').style.display = 'block';
-      } 
-    });
-  </script>
+  <title>Tu Página de Comida</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="recetas.html">Recetas</a></li>
-        <li><a href="restaurantes.html">Restaurantes</a></li>
-        <li><a href="tendencias.html">Tendencias</a></li>
-        <li><a href="salud-nutricion.html">Salud y Nutrición</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Menú</a></li>
+        <li><a href="#">Reservas</a></li>
+        <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
-    <a href="index.html">Foodie Crush</a>
-    <a href="login.html">Iniciar sesión</a>
-    <a href="register.html">Registrarse</a>
-  </header>  <main>
-  <section id="recetas">
-    <h2>Recetas</h2>
-    <p>Aquí puedes encontrar deliciosas recetas para disfrutar en casa.</p>
-    <!-- Agrega aquí el contenido relacionado con las recetas -->
-  </section>
-
-  <section id="restaurantes">
-    <h2>Restaurantes</h2>
-    <p>Descubre los mejores restaurantes de la ciudad y sus especialidades.</p>
-    <!-- Agrega aquí el contenido relacionado con los restaurantes -->
-  </section>
-
-  <section id="tendencias">
-    <h2>Tendencias</h2>
-    <p>Explora las últimas tendencias en gastronomía y cocina.</p>
-    <!-- Agrega aquí el contenido relacionado con las tendencias -->
-  </section>
-
-  <section id="salud-nutricion">
-    <h2>Salud y Nutrición</h2>
-    <p>Consejos y artículos para mantener una alimentación saludable.</p>
-    <!-- Agrega aquí el contenido relacionado con la salud y nutrición -->
-  </section>
-
-    <div id="addContent" style="display: none;">
-      <!-- Aquí se muestra el contenido editable y opciones para agregar contenido -->
-    </div>
-
-    <button id="logout" style="display: none;" onclick="logout()">Cerrar sesión</button>
-  </main>
-
-  <footer>
-    <!-- Contenido del pie de página... -->
-  </footer>
-</body>
-</html>
+  </header>
 
   <main>
-  <section id="recetas">
-    <h2>Recetas</h2>
-    <p>Aquí puedes encontrar deliciosas recetas para disfrutar en casa.</p>
-    <!-- Agrega aquí el contenido relacionado con las recetas -->
-  </section>
+    <section class="hero">
+      <h1>Bienvenido a Tu Página de Comida</h1>
+      <p>Descubre sabores exquisitos en nuestro restaurante.</p>
+      <a href="#" class="btn">Reserva ahora</a>
+    </section>
 
-  <section id="restaurantes">
-    <h2>Restaurantes</h2>
-    <p>Descubre los mejores restaurantes de la ciudad y sus especialidades.</p>
-    <!-- Agrega aquí el contenido relacionado con los restaurantes -->
-  </section>
+    <section class="about">
+      <h2>Sobre Nosotros</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non justo id felis commodo rhoncus. Maecenas elementum, augue ut mattis semper, libero est bibendum ex, vel lacinia tellus velit vel nunc.</p>
+    </section>
 
-  <section id="tendencias">
-    <h2>Tendencias</h2>
-    <p>Explora las últimas tendencias en gastronomía y cocina.</p>
-    <!-- Agrega aquí el contenido relacionado con las tendencias -->
-  </section>
+    <section class="menu">
+      <h2>Nuestro Menú</h2>
+      <ul>
+        <li>Plato 1</li>
+        <li>Plato 2</li>
+        <li>Plato 3</li>
+        <li>Plato 4</li>
+      </ul>
+    </section>
 
-  <section id="salud-nutricion">
-    <h2>Salud y Nutrición</h2>
-    <p>Consejos y artículos para mantener una alimentación saludable.</p>
-    <!-- Agrega aquí el contenido relacionado con la salud y nutrición -->
-  </section>
-
-    <div id="addContent" style="display: none;">
-      <!-- Aquí se muestra el contenido editable y opciones para agregar contenido -->
-    </div>
-
-    <button id="logout" style="display: none;" onclick="logout()">Cerrar sesión</button>
+    <section class="contact">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo electrónico">
+        <textarea placeholder="Mensaje"></textarea>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
   </main>
 
   <footer>
-    <!-- Contenido del pie de página... -->
+    <p>&copy; 2023 Tu Página de Comida. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+
