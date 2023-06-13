@@ -4,6 +4,44 @@
   <meta charset="UTF-8">
   <title>Foodie Crush</title>
   <link rel="stylesheet" href="styles.css">
+   <style>
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .slideshow-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slideshow-item.active {
+      opacity: 1;
+    }
+
+    .slideshow-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .slideshow-controls button {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -70,6 +108,36 @@
     </section>
   </div>
 
+   <div class="container">
+    <h2>Comunicadores</h2>
+    <div class="slideshow">
+      <div class="slideshow-item active">
+        <h3>Persona 1</h3>
+        <p>Biografía de la Persona 1</p>
+      </div>
+      <div class="slideshow-item">
+        <h3>Persona 2</h3>
+        <p>Biografía de la Persona 2</p>
+      </div>
+      <div class="slideshow-item">
+        <h3>Persona 3</h3>
+        <p>Biografía de la Persona 3</p>
+      </div>
+      <div class="slideshow-item">
+        <h3>Persona 4</h3>
+        <p>Biografía de la Persona 4</p>
+      </div>
+      <div class="slideshow-item">
+        <h3>Persona 5</h3>
+        <p>Biografía de la Persona 5</p>
+      </div>
+      <div class="slideshow-controls">
+        <button onclick="previousSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  </div>
+  
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
@@ -82,6 +150,37 @@
   </footer>
 
   <script src="script.js"></script>
+   <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slideshow-item');
+    const totalSlides = slides.length;
+
+    function showSlide() {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+      slides[slideIndex].classList.add('active');
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      showSlide();
+    }
+
+    function previousSlide() {
+      slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+      showSlide();
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowRight') {
+        nextSlide();
+      } else if (event.key === 'ArrowLeft') {
+        previousSlide();
+      }
+    });
+       </script>
+
 </body>
 </html>
 
