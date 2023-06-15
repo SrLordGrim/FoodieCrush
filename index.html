@@ -4,6 +4,37 @@
   <meta charset="UTF-8">
   <title>Foodie Crush</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .slideshow {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px 0;
+    }
+
+    .slideshow-item {
+      width: 70px;
+      height: 70px;
+      margin-right: 5px;
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .slideshow-item.active {
+      background-color: #555;
+    }
+
+    .slideshow-controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar">
@@ -31,7 +62,7 @@
     <section class="category">
       <h2>Cocina Internacional</h2>
       <div class="news-ultimas-horas">
-        <div class="news-item">
+         <div class="news-item">
           <img src="ruta_de_la_imagen_1" alt="Noticia 1">
           <div class="news-content">
             <h3>Titular de la Noticia 1</h3>
@@ -58,14 +89,13 @@
             <p class="full-content">Contenido completo de la Noticia 3</p>
           </div>
         </div>
-        <!-- Agrega más elementos de noticias -->
       </div>
     </section>
 
     <section class="category">
       <h2>Consejos y Trucos</h2>
       <div class="news-ultimas-horas">
-        <div class="news-item">
+         <div class="news-item">
           <img src="ruta_de_la_imagen_1" alt="Noticia 1">
           <div class="news-content">
             <h3>Titular de la Noticia 1</h3>
@@ -92,14 +122,13 @@
             <p class="full-content">Contenido completo de la Noticia 3</p>
           </div>
         </div>
-        <!-- Agrega más elementos de noticias -->
       </div>
     </section>
 
     <section class="category">
       <h2>Eventos Gastronómicos</h2>
       <div class="news-ultimas-horas">
-        <div class="news-item">
+         <div class="news-item">
           <img src="ruta_de_la_imagen_1" alt="Noticia 1">
           <div class="news-content">
             <h3>Titular de la Noticia 1</h3>
@@ -126,14 +155,13 @@
             <p class="full-content">Contenido completo de la Noticia 3</p>
           </div>
         </div>
-        <!-- Agrega más elementos de noticias -->
       </div>
     </section>
 
     <section class="category">
       <h2>Noticias de Últimas Horas</h2>
       <div class="news-ultimas-horas">
-        <div class="news-item">
+         <div class="news-item">
           <img src="ruta_de_la_imagen_1" alt="Noticia 1">
           <div class="news-content">
             <h3>Titular de la Noticia 1</h3>
@@ -160,7 +188,6 @@
             <p class="full-content">Contenido completo de la Noticia 3</p>
           </div>
         </div>
-        <!-- Agrega más elementos de noticias -->
       </div>
     </section>
   </div>
@@ -188,10 +215,10 @@
         <h3>Persona 5</h3>
         <p>Biografía de la Persona 5</p>
       </div>
-      <div class="slideshow-controls">
-        <button onclick="previousSlide()">&#10094;</button>
-        <button onclick="nextSlide()">&#10095;</button>
-      </div>
+    </div>
+    <div class="slideshow-controls">
+      <button onclick="previousSlide()">&#10094;</button>
+      <button onclick="nextSlide()">&#10095;</button>
     </div>
   </div>
   
@@ -206,6 +233,32 @@
     </div>
   </footer>
 
+  <script>
+    // Código JavaScript para el slideshow
+    const slideshow = document.querySelector('.slideshow');
+    const slides = Array.from(slideshow.getElementsByClassName('slideshow-item'));
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      slides[index].classList.add('active');
+      currentSlide = index;
+    }
+
+    function previousSlide() {
+      const index = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(index);
+    }
+
+    function nextSlide() {
+      const index = (currentSlide + 1) % slides.length;
+      showSlide(index);
+    }
+
+    setInterval(nextSlide, 2000);
+  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>
