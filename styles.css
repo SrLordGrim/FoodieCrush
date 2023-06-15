@@ -176,3 +176,36 @@ a {
 .comment-form button:hover {
   background-color: #555;
 }
+
+/* Estilos adicionales para las noticias */
+.news-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.news-item:hover {
+  transform: scale(1.05);
+}
+
+.news-item img {
+  width: 150px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.news-content {
+  overflow: hidden;
+}
+
+.news-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.news-content p {
+  margin-bottom: 0;
+}
