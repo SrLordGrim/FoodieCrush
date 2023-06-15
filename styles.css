@@ -36,6 +36,11 @@ a {
   color: #333;
 }
 
+.read-more {
+  color: blue;
+  text-decoration: underline;
+}
+
 /* Estilos de la barra de navegación */
 .navbar {
   background-color: #f2f2f2;
