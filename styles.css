@@ -196,7 +196,7 @@ a {
 .news-item {
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
   transition: transform 0.3s;
 }
@@ -223,4 +223,71 @@ a {
 
 .news-content p {
   margin-bottom: 0;
+}
+
+/* Estilos para la sección de Noticias de Últimas Horas */
+.news-ultimas-horas {
+  margin-bottom: 30px;
+}
+
+.news-ultimas-horas h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.news-ultimas-horas .news-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.news-ultimas-horas .news-item:hover {
+  transform: scale(1.05);
+}
+
+.news-ultimas-horas .news-item img {
+  width: 150px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+}
+
+.news-ultimas-horas .news-content {
+  overflow: hidden;
+}
+
+.news-ultimas-horas .news-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.news-ultimas-horas .news-content p {
+  margin-bottom: 0;
+}
+
+.news-ultimas-horas ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-ultimas-horas li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la sección de Cocina Internacional */
+.category.cocina-internacional {
+  background-color: #f7d6d6;
+}
+
+/* Estilos para la sección de Consejos y Trucos */
+.category.consejos-trucos {
+  background-color: #d6f7e2;
+}
+
+/* Estilos para la sección de Eventos Gastronómicos */
+.category.eventos-gastronomicos {
+  background-color: #d6e5f7;
 }
