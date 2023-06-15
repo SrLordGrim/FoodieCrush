@@ -67,6 +67,10 @@ a {
   margin-top: 10px;
 }
 
+body {
+  background-color: yellow;
+}
+
 /* Estilos de las secciones de categorías */
 .category {
   margin-bottom: 30px;
