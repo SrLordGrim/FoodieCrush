@@ -66,8 +66,23 @@ a {
 /* Estilos de las secciones de categorías */
 .category {
   margin-bottom: 30px;
-  background-color: #fff;
   padding: 20px;
+}
+
+.category:nth-child(1) {
+  background-color: #f7d6d6;
+}
+
+.category:nth-child(2) {
+  background-color: #d6f7e2;
+}
+
+.category:nth-child(3) {
+  background-color: #d6e5f7;
+}
+
+.category:nth-child(4) {
+  background-color: #f7e1d6;
 }
 
 .category h2 {
