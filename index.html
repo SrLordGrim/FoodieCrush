@@ -35,6 +35,53 @@
       margin-top: 10px;
     }
   </style>
+     <script>
+    // Slide de la sección de comunicadores
+    window.addEventListener('DOMContentLoaded', function() {
+      const slideshow = document.querySelector('.slideshow');
+      const slides = slideshow.querySelectorAll('.slideshow-item');
+      const controls = document.querySelector('.slideshow-controls');
+      const prevBtn = controls.querySelector('.prev');
+      const nextBtn = controls.querySelector('.next');
+
+      let currentSlide = 0;
+
+      function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        slides[index].classList.add('active');
+        currentSlide = index;
+      }
+
+      function goToPrevSlide() {
+        if (currentSlide === 0) {
+          goToSlide(slides.length - 1);
+        } else {
+          goToSlide(currentSlide - 1);
+        }
+      }
+
+      function goToNextSlide() {
+        if (currentSlide === slides.length - 1) {
+          goToSlide(0);
+        } else {
+          goToSlide(currentSlide + 1);
+        }
+      }
+
+      prevBtn.addEventListener('click', goToPrevSlide);
+      nextBtn.addEventListener('click', goToNextSlide);
+    });
+
+    // Función de búsqueda
+    function performSearch(event) {
+      event.preventDefault();
+      const searchInput = document.querySelector('input[name="search"]');
+      const searchTerm = searchInput.value;
+      // Realizar la búsqueda con el término ingresado
+      console.log('Realizando búsqueda:', searchTerm);
+      // Resto de la lógica de búsqueda...
+    }
+  </script>
 </head>
 <body>
   <nav class="navbar">
